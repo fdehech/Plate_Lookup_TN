@@ -10,8 +10,8 @@ from selenium.webdriver.support.ui import WebDriverWait                         
 
 sys.stderr = open('NUL', 'w')                                                                  #Suppressing Errors and Verbose
 browser_options = webdriver.ChromeOptions()
-#browser_options.add_argument("--headless")                                                           #Run Browser in Background
-#browser_options.add_argument("--disable-gpu")                                                         #Disable GPU Acceleration
+browser_options.add_argument("--headless")                                                           #Run Browser in Background
+browser_options.add_argument("--disable-gpu")                                                         #Disable GPU Acceleration
 browser_options.add_argument("--disable-logging")                                                  #Disable Verbose and logging
 browser_options.add_argument("--log-level=3")                                                             #Disable console logs
 Navigator = webdriver.Chrome(options=browser_options)            #Start a Chrome instance , Firefox and Edge are also available
